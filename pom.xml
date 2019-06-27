@@ -56,6 +56,20 @@
          			 <doUpdate>true</doUpdate>
         		</configuration>
 			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-jar-plugin</artifactId>
+			    <configuration>
+			        <archive>
+			            <manifest>
+			                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+			            </manifest>
+			            <manifestEntries>
+			                <git-SHA-1>${buildNumber}</git-SHA-1>
+			            </manifestEntries>
+			        </archive>
+			    </configuration>
+			</plugin>
 		</plugins>
 	</build>
 
